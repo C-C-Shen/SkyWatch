@@ -1,0 +1,14 @@
+.randomsDiv {
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px
+}
+
+.center {
+  margin: auto;
+  width: 70%;
+  border: 5px solid #c0c0c0;
+  background: rgb(223, 223, 223);
+  border-radius: 5px
+}

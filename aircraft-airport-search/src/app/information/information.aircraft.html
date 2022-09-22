@@ -1,0 +1,79 @@
+<html>
+  <app-inputs></app-inputs>
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+        <span class="sr-only" id="loading"></span>
+    </div>
+  </div>
+  <div>
+    <br>
+    <div class='main-area-table'>
+      <table class='icaoInformation side-by-side'>
+        <tr>
+          <th>Airport ICAO:</th>
+          <td>{{registration}}</td>
+        </tr>
+        <tr>
+          <th>ICAO24 Hex:</th>
+          <td>{{icao24}}</td>
+        </tr>
+      </table>
+      <table class='icaoInformation side-by-side' *ngIf='aircraftType'>
+        <tr>
+          <th>Manufacturer:</th>
+          <td>{{aircraftType[0].manufacturer}}</td>
+        </tr>
+        <tr>
+          <th>ICAO Type:</th>
+          <td>{{aircraftType[0].icao}}</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+  </div>
+  <router-outlet></router-outlet>
+  <div>
+    <div *ngIf='imageUrl' class='jetPhoto-section'>
+      <img class='jetPhoto' src={{imageUrl}}>
+    </div>
+    <div *ngIf='flightsArray.length' class='flightMap-section'>
+      <app-map class='fligthMap' [flightCoords]="flightsArray"></app-map>
+    </div>
+  </div>
+  <br>
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelHistOpenState = true"
+                        (closed)="panelHistOpenState = false" class='matflightInfo'>
+      <mat-expansion-panel-header class='mat-expansion-panel'>
+        <mat-panel-title>
+          Flight History
+        </mat-panel-title>
+        <mat-panel-description>
+          {{panelHistOpenState ? 'Close History Table' : 'Open History Table'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class='mat-expansion-panel-content'>
+        <table class='tableInfo' *ngIf='historyResults'>
+          <thead>
+            <tr>
+              <th>Flight</th>
+              <th>Origin</th>
+              <th>Destination</th>
+              <th>Dep. Time</th>
+              <th>Arr. Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let entry of historyResults'>
+              <td>{{entry.callsign}}</td>
+              <td><a [routerLink]="['/airport',entry.estDepartureAirport]">{{entry.estDepartureAirport}}</a></td>
+              <td><a [routerLink]="['/airport',entry.estArrivalAirport]">{{entry.estArrivalAirport}}</a></td>
+              <td>{{entry.firstSeenDate}}</td>
+              <td>{{entry.lastSeenDate}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</html>

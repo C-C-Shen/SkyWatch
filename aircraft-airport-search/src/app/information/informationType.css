@@ -1,0 +1,97 @@
+element.style {
+  height: 48px;
+}
+
+.matflightInfo {
+  width: 60%;
+}
+
+.mat-expansion-panel-header:not([aria-disabled=true]) {
+  cursor: pointer;
+}
+
+.mat-expansion-panel-header {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.mat-expansion-panel {
+  background: rgb(223, 223, 223);
+  color: rgba(0,0,0,.87);
+  border-radius: 5px
+}
+
+.mat-expansion-panel-content.mat-expanded {
+  overflow: visible;
+}
+
+.mat-expansion-panel-content {
+  overflow: hidden;
+}
+
+.mat-expansion-panel-content {
+  font: 400 14px/20px Roboto,"Helvetica Neue",sans-serif;
+  border-radius: 5px
+}
+
+div {
+  display: block;
+}
+
+.jetPhoto-section {
+  width: 60%;
+}
+
+.jetPhoto {
+  width: 100%;
+}
+
+.flightMap-section {
+  width: 35%;
+}
+
+.flightMap {
+  width: 100%;
+  border-radius: 5px
+}
+
+.airportInfo {
+  position: absolute;
+  width: 500px;
+  right: 20px;
+  top: 800px;
+  padding-bottom: 25px;
+  border-radius: 5px
+}
+
+.inputs {
+  display: inline;
+  float: none;
+  border-radius: 5px
+}
+
+.icaoInformation {
+  font-size: 30px;
+}
+
+.side-by-side {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.main-area-table {
+  width: 60%;
+}
+
+.main-area-table::afer {
+  content: "";
+  clear: both;
+  display: table;
+}

@@ -1,0 +1,144 @@
+<html>
+  <app-inputs></app-inputs>
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+        <span class="sr-only" id="loading"></span>
+    </div>
+  </div>
+  <div>
+    <br>
+    <table class='icaoInformation' *ngIf='airportData'>
+      <tr>
+        <th>Airport Name:</th>
+        <td>{{airportData.location.name}}</td>
+      </tr>
+      <tr>
+        <th>Airport ICAO:</th>
+        <td>{{displayedIcao}}</td>
+      </tr>
+    </table>
+  </div>
+  <div *ngIf='mapLocation' class='flightMap-section'>
+    <app-map class='fligthMap' [flightCoords]="[mapLocation]"></app-map>
+  </div>
+  <br>
+  <div>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelArrOpenState = true"
+                          (closed)="panelArrOpenState = false" class='matflightInfo' [expanded]="true">
+        <mat-expansion-panel-header class='mat-expansion-panel'>
+          <mat-panel-title>
+            Arrivals
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelArrOpenState ? 'Close Arrivals Table' : 'Open Arrivals Table'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class='mat-expansion-panel-content'>
+          <table class='tableInfo' *ngIf='tableResults'>
+            <thead>
+              <tr>
+                <th>Registration</th>
+                <th>Type</th>
+                <th>Airline</th>
+                <th>Flight</th>
+                <th>Origin</th>
+                <th>Arr. Time</th>
+                <th>Dep. Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let entry of tableResults.arrData'>
+                <td><a [routerLink]="['/aircraft',entry.aircraft?.registration]">{{entry.aircraft?.registration}}</a></td>
+                <td>{{entry.aircraft?.icao}}</td>
+                <td>{{entry.airline?.name}}</td>
+                <td>{{entry.flight?.iata}}</td>
+                <td>{{entry.departure?.airport}} <a [routerLink]="['/airport',entry.departure?.icao]">({{entry.departure?.icao}})</a></td>
+                <td>{{entry.arrival?.scheduled}}</td>
+                <td>{{entry.departure?.scheduled}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <br>
+  <div>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelDepOpenState = true"
+                          (closed)="panelDepOpenState = false" class='matflightInfo'>
+        <mat-expansion-panel-header class='mat-expansion-panel'>
+          <mat-panel-title>
+            Departures
+          </mat-panel-title>
+          <mat-panel-description>
+            {{panelDepOpenState ? 'Close Departures Table' : 'Open Departures Table'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class='mat-expansion-panel-content'>
+          <table class='tableInfo' *ngIf='tableResults'>
+            <thead>
+              <tr>
+                <th>Registration</th>
+                <th>Type</th>
+                <th>Airline</th>
+                <th>Flight</th>
+                <th>Destination</th>
+                <th>Dep. Time</th>
+                <th>Arr. Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let entry of tableResults.depData'>
+                <td><a [routerLink]="['/aircraft',entry.aircraft?.registration]">{{entry.aircraft?.registration}}</a></td>
+                <td>{{entry.aircraft?.icao}}</td>
+                <td>{{entry.airline?.name}}</td>
+                <td>{{entry.flight?.iata}}</td>
+                <td>{{entry.arrival?.airport}}<a [routerLink]="['/airport',entry.arrival?.icao]">({{entry.arrival?.icao}})</a></td>
+                <td>{{entry.departure?.scheduled}}</td>
+                <td>{{entry.arrival?.scheduled}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class='airportInfo'>
+    <br>
+    <table class='tableInfo' *ngIf='airportData'>
+      <thead>
+        <tr>
+          <th>Lon.</th>
+          <th>Lat.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>{{airportCoords[0]}}</th>
+          <th>{{airportCoords[1]}}</th>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table class='tableInfo' *ngIf='airportData'>
+      <thead>
+        <tr>
+          <th>Runway</th>
+          <th>Length</th>
+          <th>Width</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let entry of airportData.runways'>
+          <td>{{entry.he_ident}}/{{entry.le_ident}}</td>
+          <td>{{entry.length_ft}} ft.</td>
+          <td>{{entry.width_ft}} ft.</td>
+          <td>{{entry.surface}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</html>

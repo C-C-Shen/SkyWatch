@@ -1,0 +1,26 @@
+{
+    "name": "aircraft-api",
+    "version": "1.0.0",
+    "description": "An API ton get ahold of data such as photos and performance numbers for different aircraft",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js",
+        "build:lambda": "netlify-lambda build lambda"
+    },
+    "author": "Malte Hallström",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.20.0",
+        "body-parser": "^1.19.0",
+        "cheerio": "^1.0.0-rc.3",
+        "express": "^4.17.1",
+        "netlify-lambda": "^2.0.1",
+        "node-fetch": "^2.6.0",
+        "node-html-parser": "^1.2.20",
+        "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}

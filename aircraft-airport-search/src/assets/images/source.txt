@@ -1,0 +1,2 @@
+airportMarker.png from: https://www.flaticon.com/free-icon/airport-departures_84973?term=airplane&page=1&position=25&page=1&position=25&related_id=84973&origin=tag#
+Logo.png modified from: https://cdn4.iconfinder.com/data/icons/aviation-cobalt/512/search_flight-512.png

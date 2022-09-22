@@ -1,0 +1,30 @@
+<html>
+  <router-outlet></router-outlet>
+  <div class='randomsDiv'>
+    <div class='horizontal-center'>
+      <app-inputs></app-inputs>
+    </div>
+    <br>
+    <br>
+    <table class='.tableInfo center' *ngIf='randomAirports'>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ICAO</th>
+          <th>Continent</th>
+          <th>Country</th>
+          <th>Municipality</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let entry of randomAirports'>
+          <td>{{entry.name}}</td>
+          <td><a [routerLink]="['/airport',entry.ident]">{{entry.ident}}</a></td>
+          <td>{{entry.continent}}</td>
+          <td>{{entry.iso_country}}</td>
+          <td>{{entry.municipality}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</html>
