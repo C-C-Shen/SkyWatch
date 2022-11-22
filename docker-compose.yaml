@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  airport_aircraft_front:
+    build: ./aircraft-airport-search
+    ports:
+      - 4200:4200
+  aircraft_api:
+    build: ./aircraft-api-master
+    ports:
+      - 3000:3000
