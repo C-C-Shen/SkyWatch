@@ -12,9 +12,9 @@ https://airlabs.co/ (1k requsets a month limit with free plan)
 
 Once the required keys have been obtained, go into /aircraft-airport-search/api-keys.json and replace the appropriate values.
 
-If using docker, run 'ducker compose up --build'
+If using docker, run `docker compose up --build`
 
-Otherwise
+Otherwise:
 
 1st, start image server/fetcher
 
