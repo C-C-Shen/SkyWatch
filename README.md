@@ -5,7 +5,7 @@ Make sure to obtain api keys/account information at the following sites:
 
 https://aviationstack.com/documentation (100 requsets a month limit with free plan)
 
-https://openskynetwork.github.io/opensky-api/rest.html#id10
+https://opensky-network.org/my-opensky
 
 https://airlabs.co/ (1k requsets a month limit with free plan)
 
@@ -28,7 +28,7 @@ Otherwise:
 
 2nd, start web serve
 
-`cd aircraft-airport-serach`
+`cd aircraft-airport-search`
 
 `npm install -d`
 
