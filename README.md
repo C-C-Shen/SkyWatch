@@ -44,5 +44,7 @@ Otherwise:
 # Example Pages
 <img width="468" height="224" alt="Main_Page" src="https://github.com/user-attachments/assets/3b1cfc83-ee18-4a32-b4f5-6ac143e0c5a0" />
 
+
+# Other
 ![](https://github.com/C-C-Shen/SkyWatch/blob/main/Airport_Page.gif)
 ![](https://github.com/C-C-Shen/SkyWatch/blob/main/Aircraft_Page.gif)
