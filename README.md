@@ -17,6 +17,7 @@ If using docker, run `docker compose up --build`
 Otherwise:
 
 1st, start image server/fetcher
+![Aircraft_Page](https://github.com/user-attachments/assets/6d29f7d5-9731-434e-b29b-c4b4a9f2c617)
 
 (this is a modified version of https://github.com/SkySails/aircraft-api)
 
@@ -35,3 +36,11 @@ Otherwise:
 `ng serve`
 
 3rd, go to localhost:4200
+
+# Design Documents:
+<img width="356" height="287" alt="Endpoints" src="https://github.com/user-attachments/assets/97b7aa7f-604d-438d-af87-745e147025a4" />
+<img width="468" height="307" alt="Design" src="https://github.com/user-attachments/assets/bad192d0-551d-4e46-892b-7367ab98010c" />
+
+# Example Pages
+![Airport_Page](https://github.com/user-attachments/assets/c1341ca0-a97f-4a28-85e2-dec60f63ba3a)
+![Aircraft_Page](https://github.com/user-attachments/assets/e7acee4a-41b9-4453-b766-da571152ae4e)
