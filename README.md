@@ -42,5 +42,4 @@ Otherwise:
 <img width="468" height="307" alt="Design" src="https://github.com/user-attachments/assets/bad192d0-551d-4e46-892b-7367ab98010c" />
 
 # Example Pages
-![Airport_Page](https://github.com/user-attachments/assets/c1341ca0-a97f-4a28-85e2-dec60f63ba3a)
-![Aircraft_Page](https://github.com/user-attachments/assets/e7acee4a-41b9-4453-b766-da571152ae4e)
+<img width="468" height="224" alt="Main_Page" src="https://github.com/user-attachments/assets/3b1cfc83-ee18-4a32-b4f5-6ac143e0c5a0" />
