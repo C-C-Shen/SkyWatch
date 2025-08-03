@@ -41,10 +41,11 @@ Otherwise:
 <img width="356" height="287" alt="Endpoints" src="https://github.com/user-attachments/assets/97b7aa7f-604d-438d-af87-745e147025a4" />
 <img width="468" height="307" alt="Design" src="https://github.com/user-attachments/assets/bad192d0-551d-4e46-892b-7367ab98010c" />
 
-# Example Pages
+# Main Page
 <img width="468" height="224" alt="Main_Page" src="https://github.com/user-attachments/assets/3b1cfc83-ee18-4a32-b4f5-6ac143e0c5a0" />
 
-
-# Other
+# Airport Page
 ![](https://github.com/C-C-Shen/SkyWatch/blob/main/Airport_Page.gif)
+
+# Aircraft Page
 ![](https://github.com/C-C-Shen/SkyWatch/blob/main/Aircraft_Page.gif)
