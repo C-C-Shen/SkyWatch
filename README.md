@@ -17,7 +17,6 @@ If using docker, run `docker compose up --build`
 Otherwise:
 
 1st, start image server/fetcher
-![Aircraft_Page](https://github.com/user-attachments/assets/6d29f7d5-9731-434e-b29b-c4b4a9f2c617)
 
 (this is a modified version of https://github.com/SkySails/aircraft-api)
 
